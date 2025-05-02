@@ -23,15 +23,15 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message, className }) => 
   return (
     <div
       className={cn(
-        'flex flex-col mb-2 max-w-[85%]',
+        'flex flex-col mb-2 max-w-[85%] animate-[message-appear_0.3s_ease-out]',
         isUser ? 'ml-auto items-end' : 'mr-auto items-start',
         className
       )}
     >
       <div
         className={cn(
-          'px-3 py-2 rounded-md text-sm',
-          isUser ? 'bg-retro-blue text-white' : 'bg-white border border-retro-darkgray'
+          'px-3 py-2 rounded-md text-sm shadow-sm',
+          isUser ? 'message-bubble-out' : 'message-bubble-in'
         )}
       >
         {message.text}
@@ -39,7 +39,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message, className }) => 
       <div className="flex items-center mt-1 text-xs text-gray-500 space-x-1">
         <span>{message.timestamp}</span>
         {isUser && message.isSent && (
-          <span className="text-[10px]">
+          <span className="text-[10px] ml-1">
             {message.isRead ? '✓✓' : '✓'}
           </span>
         )}

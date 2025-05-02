@@ -63,17 +63,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Retro Windows 98 colors
+				// Enhanced Retro Windows 98 colors
 				retro: {
 					'blue': '#0000AA',
-					'lightgray': '#D4D0C8',
+					'lightblue': '#1084d0',
+					'darkblue': '#000080', // Windows 98 title bar blue
+					'lightgray': '#D4D0C8', // Windows 98 background
 					'darkgray': '#808080',
 					'cyan': '#00AAAA',
 					'green': '#00AA00',
 					'title': '#000080',
 					'button': '#C0C0C0',
 					'buttonhighlight': '#FFFFFF',
-					'buttonshadow': '#808080'
+					'buttonshadow': '#808080',
+					'window': '#ECECEC',
+					'windowframe': '#DFDFDF',
+					'windowtext': '#000000',
+					'desktop': '#008080', // Classic teal desktop
+					'menubar': '#D4D0C8', 
+					'menutext': '#000000',
+					'highlight': '#0000AA', // Selected item highlight
+					'highlighttext': '#FFFFFF',
+					'graytext': '#808080',
+					'infobackground': '#FFFFE1',
+					'infotext': '#000000'
 				}
 			},
 			borderRadius: {
@@ -106,6 +119,19 @@ export default {
 					'0%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-0.5rem)' },
 					'100%': { transform: 'translateY(0)' }
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'shake': {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-2px)' },
+					'20%, 40%, 60%, 80%': { transform: 'translateX(2px)' }
 				}
 			},
 			animation: {
@@ -114,10 +140,21 @@ export default {
 				'connecting': 'connecting 1.5s infinite ease-in-out',
 				'loading-dot-1': 'loading-dots 1s infinite ease-in-out',
 				'loading-dot-2': 'loading-dots 1s infinite ease-in-out 0.2s',
-				'loading-dot-3': 'loading-dots 1s infinite ease-in-out 0.4s'
+				'loading-dot-3': 'loading-dots 1s infinite ease-in-out 0.4s',
+				'marquee': 'marquee 10s linear infinite',
+				'blink': 'blink 1s step-end infinite',
+				'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both'
 			},
 			fontFamily: {
-				'ms-sans': ['"MS Sans Serif"', 'Pixelated MS Sans Serif', 'MS Sans Serif', '"Microsoft Sans Serif"', 'sans-serif']
+				'ms-sans': ['"MS Sans Serif"', 'Pixelated MS Sans Serif', 'MS Sans Serif', '"Microsoft Sans Serif"', 'sans-serif'],
+				'vt323': ['VT323', 'monospace']
+			},
+			boxShadow: {
+				'win98': 'inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px gray, inset 2px 2px #fff',
+				'win98-inset': 'inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey'
+			},
+			backgroundImage: {
+				'win98-gradient': 'linear-gradient(90deg, #000080, #1084d0)'
 			}
 		}
 	},

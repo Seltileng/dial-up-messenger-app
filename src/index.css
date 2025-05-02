@@ -92,7 +92,33 @@
 
   body {
     @apply bg-retro-lightgray text-foreground;
-    font-family: 'MS Sans Serif', 'Pixelated MS Sans Serif', 'Microsoft Sans Serif', sans-serif;
+    font-family: 'VT323', 'MS Sans Serif', 'Pixelated MS Sans Serif', 'Microsoft Sans Serif', sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230000aa' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #d4d0c8;
+    border-left: 1px solid #808080;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 1px solid #808080;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #d4d0c8;
   }
 }
 
@@ -105,15 +131,18 @@
   .window-title-98 {
     @apply bg-retro-title text-white font-bold px-2 py-1 flex justify-between items-center;
     height: 18px;
+    background: linear-gradient(90deg, #000080, #1084d0);
   }
 
   .button-98 {
     @apply bg-retro-button px-4 py-1 border font-ms-sans text-sm leading-none outline-none;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    transition: all 0.1s;
   }
 
   .button-98:active {
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    transform: translateY(1px);
   }
 
   .inset-98 {
@@ -132,4 +161,113 @@
     background: #a9a9a9;
     border: 1px solid #000000;
   }
+
+  /* New classes for enhanced Windows 98 UI */
+  .desktop-pattern {
+    background-color: #008080;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm32-4c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  .text-shadow-win98 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .input-98 {
+    @apply bg-white border border-gray-400 px-2 py-1 text-sm;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+  }
+  
+  .menu-98 {
+    @apply bg-retro-lightgray border border-gray-500 shadow-md;
+  }
+  
+  .menu-item-98 {
+    @apply px-4 py-1 text-sm hover:bg-retro-blue hover:text-white cursor-pointer;
+  }
+
+  .dialog-98 {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .connecting-animation {
+    @apply relative h-2 bg-gray-300 overflow-hidden my-2;
+  }
+  
+  .connecting-bar {
+    @apply absolute top-0 left-0 h-full bg-retro-green;
+    animation: connecting-progress 3s ease-in-out infinite;
+  }
+
+  @keyframes connecting-progress {
+    0% { width: 0%; }
+    50% { width: 100%; }
+    100% { width: 0%; }
+  }
+
+  .spinning-hourglass {
+    animation: spin 1s infinite steps(8);
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .dial-up-noise {
+    position: relative;
+  }
+
+  .dial-up-noise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.15;
+  }
+
+  .message-bubble-out {
+    @apply bg-retro-blue text-white;
+    position: relative;
+  }
+
+  .message-bubble-in {
+    @apply bg-white border border-retro-darkgray;
+    position: relative;
+  }
+
+  .blink-cursor {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
 }
+
+/* Custom keyframes animations */
+@keyframes dialup-connect {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes message-appear {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing-indicator {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+}
+
