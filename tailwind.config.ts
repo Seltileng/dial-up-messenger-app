@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Retro Windows 98 colors
+				retro: {
+					'blue': '#0000AA',
+					'lightgray': '#D4D0C8',
+					'darkgray': '#808080',
+					'cyan': '#00AAAA',
+					'green': '#00AA00',
+					'title': '#000080',
+					'button': '#C0C0C0',
+					'buttonhighlight': '#FFFFFF',
+					'buttonshadow': '#808080'
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'connecting': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'loading-dots': {
+					'0%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-0.5rem)' },
+					'100%': { transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'connecting': 'connecting 1.5s infinite ease-in-out',
+				'loading-dot-1': 'loading-dots 1s infinite ease-in-out',
+				'loading-dot-2': 'loading-dots 1s infinite ease-in-out 0.2s',
+				'loading-dot-3': 'loading-dots 1s infinite ease-in-out 0.4s'
+			},
+			fontFamily: {
+				'ms-sans': ['"MS Sans Serif"', 'Pixelated MS Sans Serif', 'MS Sans Serif', '"Microsoft Sans Serif"', 'sans-serif']
 			}
 		}
 	},
